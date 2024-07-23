@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Product preview card component - MikDra1</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          letterSpacing: {
+            4: "0.3em",
+          },
+          extend: {
+            colors: {
+              darkCyan: "hsl(158, 36%, 37%)",
+              cream: "hsl(30, 38%, 92%)",
+              veryDarkBlue: "hsl(212, 21%, 14%)",
+              darkGrayishBlue: "hsl(228, 12%, 48%)",
+            },
+          },
+          fontFamily: {
+            body: ["Montserrat", "sans-serif"],
+            serif: ["Fraunces", "serif"],
+          },
+          screen: {
+            sm : "640px"
+          }
+        },
+      };
+    </script>
+  </head>
+  <body class="text-[14px] bg-cream h-screen grid place-items-center p-4 font-body">
+    <div
+      class="container mx-auto bg-white grid sm:grid-cols-2 overflow-hidden rounded-lg  sm:w-[620px]"
+    >
+      <div>
+        <img
+          src="images/image-product-mobile.jpg"
+          alt=""
+          class="w-full sm:hidden"
+        />
+        <img
+          src="images/image-product-desktop.jpg"
+          alt=""
+          class="w-full hidden sm:block"
+        />
+      </div>
+
+      <div class="p-4 sm:p-8 grid justify-center">
+        <h2 class="uppercase tracking-4 font-body mt-2 text-veryDarkBlue">Perfume</h2>
+        <h1 class="font-serif font-bold text-3xl my-4 sm:mt-4">Gabrielle Essence Eau De Parfum</h1>
+        <p class=" mb-4 text-darkGrayishBlue sm:my-4 font-medium text-[15px]">
+          A floral, solar and voluptuous interpretation composed by Olivier
+          Polge, Perfumer-Creator for the House of CHANEL.
+        </p>
+        <div class="flex gap-4 items-center ">
+          <p class="text-3xl font-serif text-darkCyan font-bold">$149.99</p>
+          <p class="line-through text-darkGrayishBlue">$169.99</p>
+        </div>
+        <a href="#" class=" w-full py-3 px-8 flex items-center justify-center gap-4 bg-darkCyan text-white mt-4 rounded-lg sm:mt-6 hover:bg-veryDarkBlue transtion duration-200">
+          <img src="images/icon-cart.svg" alt="icon cart icon">
+          <p class="font-bold">Add to Cart</p>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
